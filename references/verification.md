@@ -37,6 +37,10 @@ A separate agent used the completed skill to distinguish a synthetic wrong-DOI c
 
 The review identified an encoded credential-echo redaction gap; it was corrected and independently rechecked with synthetic credentials before release. No remaining actionable helper defect was reported. Dataset-specific reuse terms were not independently reconfirmed in the forward test because the indicator portal timed out; any dataset redistribution still requires its applicable license check. Test artifacts and raw datasets are not bundled in this repository.
 
+## Beginner guide examples
+
+On 2026-10-10, the documented command-line examples were exercised from the toolkit folder: the PubMed demo returned one PMID, the Crossref query returned two bibliographic candidates, the Vietnam World Bank extract returned 14 annual records for 2010–2023, and the ClinicalTrials.gov example returned two study records. All four responses were HTTP 200 and contained the expected record fields. The dry-run, output-file behavior and local documentation links were also checked. Example output files are excluded from the public repository.
+
 ## Practical limits
 
 A single successful probe does not establish completeness, pagination correctness, billing guarantees, uptime or scientific validity. The helper performs one request with bounded retries; downstream applications must inspect provider-level messages and implement requested screening, pagination, normalization or analysis. Future changes should update this record with date, request scope and failures.

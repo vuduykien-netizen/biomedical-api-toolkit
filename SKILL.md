@@ -7,6 +7,8 @@ description: Select and query public biomedical research APIs to find literature
 
 Turn a research question into traceable API requests and useful research artifacts. Prioritize official sources and free access within documented limits. This skill supports literature and data work; it does not diagnose patients or certify scientific conclusions.
 
+For first-time setup or usage questions, read the [English beginner guide](docs/getting-started.md) or [Vietnamese guide](docs/getting-started.vi.md). Choose the user's language; do not load both for ordinary research tasks.
+
 ## Choose a workflow
 
 Read only the relevant parts of [workflows.md](references/workflows.md):
