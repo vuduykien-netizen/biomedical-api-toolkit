@@ -28,8 +28,14 @@ Reviewed official provider documentation linked in [api-catalog.md](api-catalog.
 ## Local checks
 
 - Skill creator structural validation passed.
-- Offline helper tests passed: search syntax encoding, query/header credential handling, response-echo redaction, missing required contact handling, API-relative paths, credential-parameter rejection, bounded retries, sanitized HTTP errors, non-JSON preservation, and preventing output replacement.
+- All 12 offline helper tests passed: search syntax encoding, query/header credential handling, response-echo redaction (including lowercase percent escapes), missing required contact handling, API-relative paths, credential-parameter rejection, bounded retries, sanitized HTTP errors, non-JSON preservation, and preventing output replacement.
 - Local Markdown links were checked after all referenced files were created.
+
+## Independent forward test
+
+A separate agent used the completed skill to distinguish a synthetic wrong-DOI citation from an unresolved reference, and to prepare a small Vietnam life-expectancy teaching extract for 2010–2023. The helper retrieved 14 annual observations with query, definition, timestamp and transformation provenance. An initial transient World Bank network failure was resolved by one bounded retry.
+
+The review identified an encoded credential-echo redaction gap; it was corrected and independently rechecked with synthetic credentials before release. No remaining actionable helper defect was reported. Dataset-specific reuse terms were not independently reconfirmed in the forward test because the indicator portal timed out; any dataset redistribution still requires its applicable license check. Test artifacts and raw datasets are not bundled in this repository.
 
 ## Practical limits
 
