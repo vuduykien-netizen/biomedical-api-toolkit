@@ -1,0 +1,111 @@
+{
+  "schema_version": 1,
+  "reviewed_on": "2026-10-10",
+  "providers": {
+    "pubmed": {
+      "name": "PubMed / NCBI E-utilities",
+      "base_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+      "docs": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "access": "free-rate-limited",
+      "credential": {"env": "NCBI_API_KEY", "location": "query", "name": "api_key", "required": false},
+      "demo": {"path": "esearch.fcgi", "params": {"db": "pubmed", "term": "diabetes", "retmax": "1", "retmode": "json"}}
+    },
+    "europepmc": {
+      "name": "Europe PMC",
+      "base_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+      "docs": "https://europepmc.org/RestfulWebService",
+      "access": "free-public",
+      "demo": {"path": "search", "params": {"query": "diabetes", "pageSize": "1", "format": "json", "resultType": "core"}}
+    },
+    "mesh": {
+      "name": "MeSH RDF / Lookup",
+      "base_url": "https://id.nlm.nih.gov/mesh/",
+      "docs": "https://id.nlm.nih.gov/mesh/",
+      "access": "free-public",
+      "demo": {"path": "lookup/descriptor", "params": {"label": "diabetes", "match": "contains", "limit": "1"}}
+    },
+    "crossref": {
+      "name": "Crossref",
+      "base_url": "https://api.crossref.org/",
+      "docs": "https://www.crossref.org/documentation/retrieve-metadata/rest-api/",
+      "access": "free-public",
+      "credential": {"env": "CROSSREF_MAILTO", "location": "query", "name": "mailto", "required": false},
+      "demo": {"path": "works", "params": {"query.bibliographic": "systematic review", "rows": "1"}}
+    },
+    "openalex": {
+      "name": "OpenAlex",
+      "base_url": "https://api.openalex.org/",
+      "docs": "https://help.openalex.org/api/",
+      "access": "limited-free-tier",
+      "credential": {"env": "OPENALEX_API_KEY", "location": "query", "name": "api_key", "required": false},
+      "demo": {"path": "works", "params": {"search": "diabetes", "per_page": "1", "select": "id,doi,title,publication_year"}}
+    },
+    "semanticscholar": {
+      "name": "Semantic Scholar Academic Graph",
+      "base_url": "https://api.semanticscholar.org/graph/v1/",
+      "docs": "https://api.semanticscholar.org/api-docs/",
+      "access": "free-rate-limited",
+      "credential": {"env": "S2_API_KEY", "location": "header", "name": "x-api-key", "required": false},
+      "demo": {"path": "paper/search", "params": {"query": "diabetes", "limit": "1", "fields": "title,year,externalIds,url"}}
+    },
+    "unpaywall": {
+      "name": "Unpaywall DOI lookup",
+      "base_url": "https://api.unpaywall.org/v2/",
+      "docs": "https://unpaywall.org/api",
+      "access": "free-contact-required",
+      "credential": {"env": "UNPAYWALL_EMAIL", "location": "query", "name": "email", "required": true},
+      "demo": {"path": "10.1038/nature12373", "params": {}}
+    },
+    "clinicaltrials": {
+      "name": "ClinicalTrials.gov v2",
+      "base_url": "https://clinicaltrials.gov/api/v2/",
+      "docs": "https://clinicaltrials.gov/data-api/about-api",
+      "access": "free-public",
+      "demo": {"path": "studies", "params": {"query.cond": "diabetes", "pageSize": "1", "format": "json"}}
+    },
+    "worldbank": {
+      "name": "World Bank Indicators v2",
+      "base_url": "https://api.worldbank.org/v2/",
+      "docs": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392",
+      "access": "free-public",
+      "demo": {"path": "country/VNM/indicator/SP.DYN.LE00.IN", "params": {"format": "json", "per_page": "1"}}
+    },
+    "openfda": {
+      "name": "openFDA",
+      "base_url": "https://api.fda.gov/",
+      "docs": "https://open.fda.gov/apis/authentication/",
+      "access": "free-rate-limited",
+      "credential": {"env": "OPENFDA_API_KEY", "location": "query", "name": "api_key", "required": false},
+      "demo": {"path": "drug/event.json", "params": {"limit": "1"}}
+    },
+    "rxnorm": {
+      "name": "RxNorm / RxNav",
+      "base_url": "https://rxnav.nlm.nih.gov/REST/",
+      "docs": "https://www.lhncbc.nlm.nih.gov/RxNav/APIs/RxNormAPIs.html",
+      "access": "free-public-with-licensed-exceptions",
+      "credential": {"env": "UMLS_API_KEY", "location": "header", "name": "Authorization", "prefix": "Bearer ", "required": false},
+      "demo": {"path": "rxcui.json", "params": {"name": "metformin"}}
+    },
+    "medrxiv": {
+      "name": "medRxiv",
+      "base_url": "https://api.medrxiv.org/",
+      "docs": "https://api.medrxiv.org/details/medrxiv/help",
+      "access": "free-public",
+      "demo": {"path": "details/medrxiv/2026-10-01/2026-10-02/0/json", "params": {}}
+    },
+    "biorxiv": {
+      "name": "bioRxiv",
+      "base_url": "https://api.biorxiv.org/",
+      "docs": "https://api.biorxiv.org/",
+      "access": "free-public",
+      "demo": {"path": "details/biorxiv/2026-10-01/2026-10-02/0/json", "params": {}}
+    },
+    "chembl": {
+      "name": "ChEMBL",
+      "base_url": "https://www.ebi.ac.uk/chembl/api/data/",
+      "docs": "https://github.com/chembl/GLaDOS-docs/blob/master/web-services/chembl-data-web-services.md",
+      "access": "free-public",
+      "demo": {"path": "molecule/CHEMBL25.json", "params": {}}
+    }
+  }
+}

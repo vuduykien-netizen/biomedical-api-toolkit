@@ -1,0 +1,4 @@
+interface:
+  display_name: "Biomedical API Toolkit"
+  short_description: "Find biomedical evidence and data with public APIs"
+  default_prompt: "Use $biomedical-api-toolkit to select public APIs and build a reproducible biomedical research workflow."
