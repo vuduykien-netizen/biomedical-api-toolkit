@@ -2,7 +2,7 @@
 
 An English-language agent skill for finding biomedical literature, verifying citations, and obtaining public research and teaching data through APIs with free access options.
 
-**New here?** Read the [beginner guide in English](docs/getting-started.md) or [hướng dẫn tiếng Việt](docs/getting-started.vi.md). Both explain the toolkit's purpose, installation, first task, example prompts, outputs and common errors.
+**New here?** Read the [beginner guide in English](docs/getting-started.md) or [Vietnamese guide](docs/getting-started.vi.md). Both explain the toolkit's purpose, installation, first task, example prompts, outputs and common errors.
 
 **14 API entries · 3 implementation tracks · Python standard library only**
 
@@ -85,7 +85,7 @@ Free biomedical API access is separate from any subscription or usage costs of y
 ## Contents
 
 - [SKILL.md](SKILL.md): skill entry point and evidence boundaries.
-- [Beginner guide](docs/getting-started.md) / [Tiếng Việt](docs/getting-started.vi.md): purpose, setup, examples, outputs and troubleshooting.
+- [Beginner guide](docs/getting-started.md) / [Vietnamese guide](docs/getting-started.vi.md): purpose, setup, examples, outputs and troubleshooting.
 - [API catalog](references/api-catalog.md): official docs, credentials, free access, examples and limits.
 - [Workflow guidance](references/workflows.md): practical methods and outputs.
 - [Implementation roadmap](references/roadmap.md): the three gradual implementation tracks.

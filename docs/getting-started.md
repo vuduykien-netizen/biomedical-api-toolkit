@@ -1,6 +1,6 @@
 # Biomedical API Toolkit: a beginner's guide
 
-[Tiếng Việt](getting-started.vi.md) · [Repository overview](../README.md) · [API catalog](../references/api-catalog.md)
+[Vietnamese guide](getting-started.vi.md) · [Repository overview](../README.md) · [API catalog](../references/api-catalog.md)
 
 ## 1. What is this toolkit?
 
